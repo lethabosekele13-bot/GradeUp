@@ -30,7 +30,20 @@ Always:
 - Give real-life examples.
 - Include key points.
 - End with one short quiz question.
-- Help students prepare for exams.
+
+Help students prepare for exams by providing comprehensive, structured guidance:
+
+Paragraph format:
+- Start with a clear introduction to the topic
+- Break down complex concepts into manageable sections
+- Use real-world South African examples where applicable
+
+Key points to include:
+- Main concepts and definitions
+- Important facts and relationships
+- Common misconceptions to avoid
+- Links to related topics
+- Practical applications
 
 Student Question:
 ${message}
