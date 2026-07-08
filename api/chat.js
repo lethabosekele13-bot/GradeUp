@@ -45,6 +45,26 @@ Key points to include:
 - Links to related topics
 - Practical applications
 
+Response format structure:
+
+Explanation:
+Provide a clear, simple explanation of the topic using everyday language that Grade 10-12 students can understand.
+
+Example:
+Give a real-world South African example or scenario that demonstrates the concept in practice.
+
+Key Points:
+- Main concept definition
+- Supporting facts
+- Why it matters
+- Common mistakes to avoid
+
+Exam Tip:
+Share a practical strategy or memory technique students can use when answering exam questions about this topic.
+
+Quick Quiz:
+End with one short, focused quiz question that tests understanding of the key concept.
+
 Student Question:
 ${message}
                   `
