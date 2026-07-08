@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GradeUp</title>
+  <link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+</head>
+<body>
+  <div class="container">
+  <h1>GradeUp</h1>
+  <p>Study smarter. Improve faster</p>
+  <button id="startBtn">Get started</button>
+  </div>
+  <div id="onboarding" style="display:none;">
+    <h2>Let's set up your study plan</h2>
+    <div class="profile-icon">👤</div>
+    <p>First, how do you like to be called?</p>
+    <input type="text" id="name" placeholder="Enter your name">
+    <button id="nextBtn">Next</button>
+    <p id="welcomeMessage"></p>    
+  </div>
+  <div id="subjectPage" style="display: none;">
+    <h2 id="subjectWelcome"></h2>
+    <p>Choose your core subjects</p>
+      <ul class="clean-list">
+  <li>
+    <input type="checkbox" id="item1">
+    <label for="item1">Mathematics</label>
+  </li>
+  <li>
+    <input type="checkbox" id="item2">
+    <label for="item2">Physical Sciences</label>
+  </li>
+  <li>
+    <input type="checkbox" id="item3">
+    <label for="item3">Life Sciences</label>
+  </li>
+  <li>
+    <input type="checkbox" id="item4">
+    <label for="item4">Geography</label>
+  </li>
+  <li>
+    <input type="checkbox" id="item5">
+    <label for="item5">Accounting</label>    
+  </li>
+  <li>
+    <input type="checkbox" id="item6">
+    <label for="item6">History</label>     
+  </li>
+  <li>
+    <input type="checkbox" id="item7">
+    <label for="item7">IT</label>
+  </li> 
+  <li>                    
+    <input type="checkbox" id="item8">
+    <label for="item8">CAT</label>
+  </li>   
+    <li>
+    <input type="checkbox" id="item9">
+    <label for="item9">Business Studies</label>
+  </li>
+  <li>
+    <input type="checkbox" id="item10">
+    <label for="item10">Economics</label>
+  </li>
+    <li>
+    <input type="checkbox" id="item11">
+    <label for="item11">Religion Studies</label>
+  </li>   
+  <li>
+    <input type="checkbox" id="item12">
+    <label for="item12">Consumer Studies</label>
+  </li>
+  <li>
+    <input type="checkbox" id="item13">
+    <label for="item13">Tourism</label>
+  </li>
+  <li>
+    <input type="checkbox" id="item14">
+    <label for="item14">Mathematics Literacy</label>
+  </li>
+  <li>
+    <input type="checkbox" id="item15">
+    <label for="item15">Agricultural Sciences</label>
+  </li>   
+   </ul>
+    <p id="subjectError"></p>
+    <button id="subjectNextBtn">Next</button>    
+  </div>
+  <div id="performancePage" style="display:none;">
+    <h2 id="performanceWelcome"></h2>
+    <h3>🎯Set your goals</h3>
+    <p class="goal-text">Set the percentage you want to achieve in each subject by the end of the year.</p>
+    <div id="marksContainer"></div>
+    <button id="performanceNextBtn">Next</button>
+  </div>
+  <div id="schedulePage" style="display: none;">
+    <h2>📅 Study Schedule</h2>
+
+    <p>What time do you usually get home?</p>
+    <input type="time" id="homeTime">
+
+    <p>How many hours can you study?</p>
+    <select id="studyHours">
+        <option value="">Select</option>
+        <option>30 minutes</option>
+        <option>1 hour</option>
+        <option>2 hours</option>
+        <option>3 hours</option>
+        <option>4+ hours</option>
+    </select>
+
+    <p>Which days do you usually study?</p>
+    <select id="studyDays">
+        <option value="">Select</option>
+        <option>Monday - Friday</option>
+        <option>Weekends</option>
+        <option>Every day</option>
+    </select>
+
+    <button id="scheduleNextBtn">Next</button>
+</div>
+  <div id="planPage" class="page" style="display:none;">
+    <h2>Your Study Plan 📚</h2>
+    <p id="planWelcome"></p>
+    <div id="planContent"></div>
+    <button id="continueBtn">Continue</button>
+</div>
+  <div id="dashboardPage" class="page" style="display:none;">
+    <div class="dashboard-header">
+    <button id="aboutBtn" class="icon-btn">ℹ️</button>
+</div>
+    <h3 id="dashboardWelcome"></h3>
+    <div id="dashboardContent"></div>
+    <div class="quote-box">
+    <h3>💡 Today's Insight</h3>
+    <p id="dailyQuote"></p>
+    <p id="sessionCount">📚 Sessions Completed: 0</p>  
+    <button id="studySessionBtn">Start</button>
+</div>
+</div>
+  <div id="overviewPage" style="display:none;">
+    <h2>Study Overview</h2>
+    <div id="averageTarget"></div>
+    <div id="overviewContent"></div>
+    <div id="scheduleOverview"></div>
+    <button id="startStudyBtn">Start Studying</button>
+</div>
+  <div id="studyPage" style="display:none;">
+    <h2>Today's Study Session 📖</h2>
+    <div id="studyContent"></div>
+  <span id="aiTutorBtn" class="ai-icon">💬</span>
+  <button id="completeSessionBtn">Complete Session</button>
+</div>
+<div id="aiTutorPage" style="display:none;">
+    <h2>🤖 GradeUp AI Tutor</h2>
+    <p>Ask questions, get explanations, and improve your understanding.</p>
+    <div id="chatBox">
+        <p class="ai-message"> 👋 Hi! I'm your GradeUp AI Tutor. What would you like to learn today?</p>
+    </div>
+    <input type="text" id="aiInput" placeholder="Ask your question...">
+    <button id="sendAiBtn">Send</button>
+    <button id="closeAiBtn">Back</button>
+</div>
+  <div id="aboutPage" style="display:none;">
+<h2>About GradeUp</h2>
+<p>GradeUp is an AI-powered study companion created to help students study smarter, stay organised, and reach their academic goals with confidence. Instead of simply reminding you to study, GradeUp builds a personalised learning experience based on your subjects, target marks, and study schedule.</p>
+<p>With intelligent study planning, daily motivation, progress tracking, and guided study sessions, GradeUp helps you build consistent study habits that lead to long-term success. Version 2.0 also introduces the GradeUp AI Tutor, giving students instant academic support whenever they need it.</p>
+<h3>What GradeUp Offers</h3>
+<p>📚 Personalised study plans based on your subjects</p>
+<p>🎯 Subject goal and target tracking</p>
+<p>📅 Smart study scheduling</p>
+<p>📈 Progress and completed session tracking</p>
+<p>💡 Daily study insights and motivation</p>
+<p>🤖 AI Tutor for learning support (Version 2.0)</p>
+<hr>
+<p><strong>Version:</strong> 2.0</p>
+<p><strong>Created by:</strong> Lethabo Sekele</p>
+<p>Built with the vision of making high-quality study support accessible to every student through simple, intelligent, and motivating technology.</p>
+    <button id="closeAboutBtn">Back</button>
+</div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #f5f7fb;
+  text-align: center;
+}
+.container {
+  width: 90%;
+  max-width: 450px;
+  margin: 40px auto;
+  text-align: center;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+h1 {
+  margin-bottom: 10px;
+  color: #1e293b;
+}
+p {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 30px;
+  line-height:1.6;
+}
+h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  background: #1d4ed8;
+}
+.profile-icon {
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.clean-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  text-align: left;
+}
+#subjectError {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.mark-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.mark-row label {
+    width: 900px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 500;
+}
+.mark-row input {
+    width: 70px;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+#performancePage h3 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+#performancePage {
+    padding: 20px;
+}
+.goal-text {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+#performanceNextBtn {
+    display: block;
+    margin-left: auto;
+    margin-top: 20px;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.quote-box h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+#dailyQuote {
+    font-size: 16px;
+    line-height: 1.6;
+}
+.task-item {
+    display: flex;
+    justify-content: center;
+    margin: 12px 0;
+}
+.task-item label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 260px;
+}
+#onboarding,
+#subjectPage,
+#performancePage,
+#schedulePage,
+#planPage,
+#dashboardPage,
+#overviewPage,
+#studyPage,
+#aboutPage,
+#aiPage {
+    width:90%;
+    max-width:450px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+input[type="text"],
+input[type="number"],
+input[type="time"],
+select {
+    width:90%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #d1d5db;
+    border-radius:8px;
+    font-size:16px;
+}
+button:active {
+    transform:scale(.97);
+}
+.dashboard-header {
+    display:flex;
+    justify-content:flex-end;
+    padding:10px;
+}
+.icon-btn {
+    background:none;
+    border:none;
+    font-size:24px;
+    cursor:pointer;
+    padding:5px;
+}
+#studyPage{
+    position: relative;
+}
+.ai-icon{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 38px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    transition: transform 0.2s;
+}
+.ai-icon:hover{
+    transform: scale(1.1);
+}
