@@ -279,7 +279,9 @@ sendAiBtn.addEventListener("click", async function () {
     aiInput.value = "";
 
     chatBox.innerHTML += `
-        <p id="thinking"><strong>GradeUp AI:</strong> Thinking...</p>
+        <div id="thinking" class="thinking-message">
+            🧠 <strong>GradeUp AI</strong> is thinking<span class="dots"></span>
+        </div>
     `;
 
     const response = await fetch("/api/chat", {
