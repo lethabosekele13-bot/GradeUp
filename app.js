@@ -265,3 +265,39 @@ closeAiBtn.addEventListener("click", function(){
     aiTutorPage.style.display = "none";
     studyPage.style.display = "block";
 });
+
+sendAiBtn.addEventListener("click", async function () {
+
+    const question = aiInput.value.trim();
+
+    if (question === "") return;
+
+    chatBox.innerHTML += `
+        <p><strong>You:</strong> ${question}</p>
+    `;
+
+    aiInput.value = "";
+
+    chatBox.innerHTML += `
+        <p id="thinking"><strong>GradeUp AI:</strong> Thinking...</p>
+    `;
+
+    const response = await fetch("/api/chat", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            message: question
+        })
+    });
+
+    const data = await response.json();
+
+    document.getElementById("thinking").remove();
+
+    chatBox.innerHTML += `
+        <p><strong>GradeUp AI:</strong> ${data.reply}</p>
+    `;
+
+});
