@@ -130,13 +130,14 @@ button:hover {
 #aboutPage,
 #aiPage,
 #aiTutorPage {
-    width:90%;
-    max-width:450px;
-    margin:40px auto;
-    background:white;
-    padding:30px;
-    border-radius:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,.1);
+  width: calc(100% - 20px);
+  max-width: 500px;
+  margin: 16px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-sizing: border-box;
 }
 input[type="text"],
 input[type="number"],
