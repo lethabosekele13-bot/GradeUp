@@ -19,6 +19,11 @@ const homeTime = document.getElementById("homeTime");
 const studyHours = document.getElementById("studyHours");
 const studyDays = document.getElementById("studyDays");
 let userProfile = JSON.parse(localStorage.getItem("userProfile")) || {};
+if (userProfile.name) {
+    container.style.display = "none";
+    dashboardPage.style.display = "block";
+    dashboardWelcome.textContent = "Welcome back, " + userProfile.name + "! 👋";
+}
 let completedSessions = Number(localStorage.getItem("completedSessions")) || 0;
 let currentSubjectIndex = Number(localStorage.getItem("currentSubjectIndex")) || 0;
 const insights = [
