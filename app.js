@@ -19,11 +19,6 @@ const homeTime = document.getElementById("homeTime");
 const studyHours = document.getElementById("studyHours");
 const studyDays = document.getElementById("studyDays");
 let userProfile = JSON.parse(localStorage.getItem("userProfile")) || {};
-if (userProfile.name) {
-    container.style.display = "none";
-    dashboardPage.style.display = "block";
-    dashboardWelcome.textContent = "Welcome back, " + userProfile.name + "! 👋";
-}
 let completedSessions = Number(localStorage.getItem("completedSessions")) || 0;
 let currentSubjectIndex = Number(localStorage.getItem("currentSubjectIndex")) || 0;
 const insights = [
@@ -126,7 +121,7 @@ subjectCheckboxes.forEach(function(checkbox) {
     });    
 });
 subjectNextBtn.addEventListener("click", function() {
-    const checkedSubjects = document.querySelectorAll('.clean-list input[type="checkbox"]:checked');
+    const checkedSubjects = document.querySelectorAll('.clean-list input[type="checkbox":checked');
     let selectedSubjects = [];
     checkedSubjects.forEach(function(subject) {
     selectedSubjects.push(subject.nextElementSibling.textContent);
