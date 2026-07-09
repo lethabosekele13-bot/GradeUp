@@ -121,7 +121,7 @@ subjectCheckboxes.forEach(function(checkbox) {
     });    
 });
 subjectNextBtn.addEventListener("click", function() {
-    const checkedSubjects = document.querySelectorAll('.clean-list input[type="checkbox":checked');
+    const checkedSubjects = document.querySelectorAll('.clean-list input[type="checkbox"]:checked');
     let selectedSubjects = [];
     checkedSubjects.forEach(function(subject) {
     selectedSubjects.push(subject.nextElementSibling.textContent);
