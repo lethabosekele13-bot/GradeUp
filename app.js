@@ -308,3 +308,32 @@ sendAiBtn.addEventListener("click", async function () {
     `;
 
 });
+
+
+window.addEventListener("load", function () {
+    const savedProfile = JSON.parse(localStorage.getItem("userProfile"));
+
+    if (savedProfile && savedProfile.name) {
+        userProfile = savedProfile;
+
+        container.style.display = "none";
+        onboarding.style.display = "none";
+        subjectPage.style.display = "none";
+        performancePage.style.display = "none";
+        schedulePage.style.display = "none";
+        planPage.style.display = "none";
+        overviewPage.style.display = "none";
+        studyPage.style.display = "none";
+        aboutPage.style.display = "none";
+        aiTutorPage.style.display = "none";
+
+        dashboardPage.style.display = "block";
+        dashboardWelcome.textContent = "Welcome back, " + userProfile.name + "! 👋";
+
+        const randomIndex = Math.floor(Math.random() * insights.length);
+        dailyQuote.textContent = insights[randomIndex];
+
+        sessionCount.textContent =
+            "📚 Sessions Completed: " + completedSessions;
+    }
+});
